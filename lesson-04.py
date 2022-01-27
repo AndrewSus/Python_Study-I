@@ -95,19 +95,24 @@ def integer_generator(start_from):
         if element > start_from+5:
             break
         yield element
+abc = []
 for element in integer_generator(1):
     print(element)
+    abc.append(element)
+print(abc)
 # Вторая часть
 x = "135"
 x_count = 0
+abc = []
 for i in cycle(x):
     if i == x[0]:
         x_count += 1
     if x_count < 3:
         print(i)
+        abc.append(i)
     else:
         break
-
+print(abc)
 
 # 7. Реализовать генератор с помощью функции с ключевым словом yield, создающим очередное значение. При вызове функции
 # должен создаваться объект-генератор. Функция вызывается следующим образом: for el in fact(n). Она отвечает за получение
@@ -127,9 +132,12 @@ def fact(n):
             yield result
         else:
             break
-
+abc = []
 for i in fact(10):
     print(i)
+    abc.append(i)
+print(abc)
+
 
 
 
